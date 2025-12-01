@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bool-orange--zal: #FF6900;
+    --bool-primary--zal: #ffffff;
+    --bool-card--zal: #e8e8e8;
+    --bool-dark--zal: #1a1a1a;
+    --bool-discount--zal: #ff0000;
+    --bool-sostenibilità--zal: #038103;
+}
+
+body {
+    background-color: var(--bool-primary--zal);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 60px;
+}
+
+main {
+    margin-top: 2rem;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    width: 80%;
+}
+
+.discount {
+    background-color: var(--bool-discount--zal);
+    color: #e8e8e8;
+    font-weight: bold;
+    padding: 7px;
+    font-size: 0.8rem;
+}
+
+.sostenibilità {
+    background-color: var(--bool-sostenibilità--zal);
+    color: #e8e8e8;
+    font-weight: bold;
+    padding: 7px;
+    font-size: 0.8rem;
+}
+
+
+/* #app_header */
+
+#app_header {
+
+    background-color: #FF6900;
+    display: flex;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 100;
+
+
+    .container {
+        justify-content: space-between;
+        align-items: center;
+        color: #ffffff;
+
+        nav {
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 1rem;
+
+                li {
+                    a {
+                        text-decoration: none;
+                        color: var(--bool-primary--zal);
+                        font-weight: bold
+                    }
+                }
+            }
+        }
+
+        .icons {
+            gap: 1rem;
+        }
+    }
+}
+
+/* #endregion */
+
+/* #app_main */
+#app_main {
+
+    .d-flex {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+.card {
+    position: relative;
+
+    img {
+        max-width: 100%;
+        width: 389px;
+    }
+
+    .badge {
+        position: absolute;
+        bottom: 15%;
+        left: 0;
+        z-index: 2;
+    }
+
+    .fa-heart {
+        position: absolute;
+        top: 3%;
+        left: 89%;
+        font-size: 1.7rem;
+        background-color: var(--bool-primary--zal);
+        padding-right: 2.3rem;
+        padding-left: 0.5rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.1rem;
+        z-index: 2;
+    }
+
+    ul {
+        list-style: none;
+
+        .marca {
+            font-size: 0.8rem;
+            color: rgb(96, 96, 96);
+            font-weight: bold;
+        }
+
+        .name {
+            font-weight: bold;
+        }
+
+        .price {
+            color: red;
+            font-weight: bold;
+        }
+
+        span {
+            color: rgb(96, 96, 96);
+            text-decoration: line-through;
+        }
+
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: 1;
+
+    }
+
+    &:hover .overlay {
+        display: block;
+    }
+}
