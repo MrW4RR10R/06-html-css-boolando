@@ -28,6 +28,7 @@ main {
 
 footer {
     margin-top: 2rem;
+    height: 90px;
 }
 
 .d-flex {
@@ -171,5 +172,56 @@ footer {
 
     &:hover .overlay {
         display: block;
+    }
+}
+
+/* #app_footer */
+#app_footer {
+
+    background-color: var(--bool-dark--zal);
+    color: var(--bool-primary--zal);
+    display: flex;
+
+    .container {
+
+        display: flex;
+        justify-content: space-between;
+
+        .legality {
+            display: flex;
+            flex-direction: column;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        ul {
+
+            margin-top: 0.5rem;
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+
+            li {
+
+                a {
+                    text-decoration: none;
+                    color: var(--bool-primary--zal);
+                    font-weight: bold
+                }
+            }
+        }
+
+        .social {
+
+            p {
+                margin-bottom: 0.5rem;
+            }
+
+            i {
+                color: var(--bool-primary--zal);
+            }
+        }
     }
 }
